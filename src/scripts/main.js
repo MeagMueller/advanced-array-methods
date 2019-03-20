@@ -92,6 +92,52 @@ const outEl = document.querySelector("#output")
 
 // console.log(manufacturingBusinesses)
 
+// businesses.forEach(business => {
+//     /* CALCULATE ORDER SUMMARY */
+// let totalOrders = business.orders.reduce(
+//     (currentTotal, nextValue) => currentTotal += nextValue,
+//     0
+// )
+
+    /* CALCULATE ORDER SUMMARY */
+    // let totalOrders = 0
+    // business.orders.forEach(order => totalOrders += order)
+// loops through each array in business, and then second forEach loops through orders (a property within the array), places it within the variable totalOrders, and the following code appends it to the DOM
+
+//     outEl.innerHTML += `
+//         <h2>
+//             ${business.companyName}
+//             ($${totalOrders.toFixed(2)})
+//         </h2>
+//         <section>
+//             ${business.addressFullStreet}
+//         </section>
+//         <section>
+//             ${business.addressCity},
+//             ${business.addressStateCode}
+//             ${business.addressZipCode}
+//         </section>
+//     `;
+//     outEl.innerHTML += "<hr/>";
+// });
+
+// lighting exercises
+
+const monthlyRainfall = [23, 13, 27, 20, 20, 31, 33, 26, 19, 12, 14, 12, 10]
+
+monthlyRainfall.forEach(amount => {
+    const totalRainfall = monthlyRainfall.reduce(
+    (accumulator, currentRainfall) => accumulator += currentRainfall) 
+    console.log(totalRainfall)
+
+})
+
+const words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
+
+const sentence = words.reduce((fullSentence, currentWord) => fullSentence + " " + currentWord)
+
+console.log(sentence)
+
 // .map will take array of objects and will return array; uses callback function as argument and executed for every item, and requires a return statement. Whatever is returned is added to the array.
 
 // ==============================================================================================
